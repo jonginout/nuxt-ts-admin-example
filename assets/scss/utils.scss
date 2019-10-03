@@ -1,0 +1,131 @@
+$open-side-bar-width: 200px;
+$close-side-bar-width: 65px;
+@mixin side-bar-transition($sec:0.05s){
+  transition: all $sec;
+}
+
+.fluid {
+  width: 100% !important;
+}
+
+.fill-layout{
+  min-height: 100vh;
+  max-width: 100%;
+}
+
+.align-center{
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.pointer {
+  cursor: pointer;
+  &:hover {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.space-up{
+  padding-top: 1rem;
+}
+
+.space-down{
+  padding-bottom: 1rem;
+}
+
+.space-left{
+  padding-left: 1rem;
+}
+
+.space-right{
+  padding-right: 1rem;
+}
+
+.space-up-mini{
+  padding-top: 0.5rem;
+}
+
+.space-down-mini{
+  padding-bottom: 0.5rem;
+}
+
+.space-left-mini{
+  padding-left: 0.5rem;
+}
+
+.space-right-mini{
+  padding-right: 0.5rem;
+}
+
+.margin-none{
+  margin: 0px !important;
+}
+
+.padding-none{
+  padding: 0px !important;
+}
+
+.text-align-center {
+  text-align: center;
+}
+.pagination{
+  button, li{
+    border: $socar-grey-03 solid 0.5px !important;
+  }
+  padding: 1rem;
+  text-align: center;
+}
+
+// 슬라이드 애니메이션 수평 (vue transition)
+@mixin anim-slideX-fade($sec : 0.05s) {
+  .slide-anim {
+    transition: all $sec;
+  }
+  .slide-anim-enter-active {
+    transition: all $sec ease;
+  }
+  .slide-anim-leave-active {
+    transition: all $sec cubic-bezier(1, 0.5, 0.8, 1);
+  }
+  .slide-anim-enter,
+  .slide-anim-leave-active {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+}
+
+// 슬라이드 애니메이션 수직 (vue transition)
+@mixin anim-slideY-fade($sec : 0.2s) {
+  .slide-anim {
+    transition: all $sec;
+  }
+  .slide-anim-enter-active {
+    transition: all $sec ease;
+  }
+  .slide-anim-leave-active {
+    transition: all $sec cubic-bezier(1, 0.5, 0.8, 1);
+  }
+  .slide-anim-enter,
+  .slide-anim-leave-active {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+}

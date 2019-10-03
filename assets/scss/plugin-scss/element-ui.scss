@@ -1,0 +1,55 @@
+@import '../colors';
+// 엘리먼트 ui 덮어쓰기용 scss
+
+body {
+  margin: 0px;
+}
+
+.el-container {
+  border: none !important;
+}
+
+.el-main {
+  overflow: unset !important;
+}
+
+.el-aside {
+  $side-menu-background-color: #304156;
+  $side-menu-hover-background-color: #425c7d;
+
+  z-index: 1000;
+  height: calc(100vh);
+  background: $side-menu-background-color;
+  width: unset !important;
+  .el-menu {
+    border: none !important;
+    .el-menu-item:hover {
+      background: $side-menu-hover-background-color !important;
+    }
+    * {
+      background: $side-menu-background-color !important;
+    }
+  }
+}
+
+.header-row {
+  th {
+    background: #f5f7fa !important;
+  }
+}
+
+.el-form-item__label {
+  padding-bottom: 0 !important;
+  height: 23px;
+  padding-left: 2px !important;
+  font-size: 12px !important;
+  font-weight: 650;
+}
+
+.el-form-item__content {
+  input, 
+  textarea,
+  .el-date-editor {
+    border-radius: 0 !important;
+  }
+}
