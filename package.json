@@ -19,7 +19,7 @@
     "element-ui": "^2.12.0",
     "lodash": "^4.17.15",
     "node-sass": "^4.11.0",
-    "nuxt": "^2.0.0",
+    "nuxt": "^3.4.3",
     "nuxt-material-design-icons": "^1.0.4",
     "qs": "^6.9.0",
     "sass-loader": "^7.1.0",
